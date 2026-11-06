@@ -1,0 +1,84 @@
+/* 对齐用户选定的三屏视觉稿。 */
+.brand-lockup .brand-icon{display:block;width:72px;height:72px;flex:none;background:url('./assets/fork-clock.png') center/250% no-repeat}
+.brand-lockup.compact .brand-icon{width:40px;height:40px}
+.chat-header .brand-lockup .brand-icon{width:29px;height:29px}
+.welcome-brand{height:100px}
+.welcome-brand .brand-lockup{gap:4px}
+.welcome-brand .brand-lockup strong{font-size:33px}
+.welcome-brand .brand-lockup small{font-size:16px}
+.campus-art{height:219px;margin-bottom:4px}
+.campus-art>img{object-fit:contain;object-position:center bottom}
+.campus-sign{left:10%;top:59%;width:49%;height:22%}
+.campus-sign strong{font-size:12.5px}
+.campus-sign small{font-size:6.2px}
+.welcome-content h1{font-size:35px;margin:1px 0 6px}
+.welcome-content>p{font-size:12.5px;white-space:normal;letter-spacing:0;margin-bottom:14px}
+.quick-rows{gap:8px}
+.quick-row{height:55px;padding:0 10px;gap:7px}
+.quick-row strong{font-size:14px}
+.row-icon{font-size:22px;width:19px}
+.mini-choice{font-size:12px;min-width:40px;min-height:30px}
+.row-summary{font-size:10.5px}
+.welcome-save{margin-top:26px;min-height:54px;font-size:16px}
+@media(min-width:421px){html,body{height:auto;min-height:100%;overflow:auto}body{min-height:940px}#app.phone{height:844px;max-height:none}}
+@media(max-width:420px){.campus-art{height:208px}.welcome-brand{height:90px}.welcome-save{margin-top:21px}}
+
+/* 透明手绘素材分层排版，与页面底色自然衔接。 */
+.welcome-hero{width:calc(100% + 34px);margin:0 -17px 11px}
+.welcome-brand{height:88px;position:relative;display:flex;align-items:center;justify-content:center}
+.welcome-brand .brand-lockup{gap:0;align-items:center}
+.welcome-brand .brand-icon{width:88px;height:66px;background-size:190%;background-position:48% 48%}
+.welcome-brand .brand-lockup>div{width:74px;display:flex;flex-direction:column;align-items:stretch;justify-content:center}
+.welcome-brand .brand-lockup strong{font-size:34px;line-height:1;letter-spacing:.06em}
+.welcome-brand .brand-lockup small{font-size:17.5px;line-height:1;margin-top:4px;letter-spacing:-.015em}
+.brand-spark{position:absolute;left:calc(50% + 91px);top:27px;width:16px;height:20px;border-top:2px solid #dfaa4e;transform:rotate(-45deg)}
+.brand-spark:before,.brand-spark:after{content:'';position:absolute;width:12px;border-top:2px solid #dfaa4e;left:-2px}
+.brand-spark:before{top:9px;transform:rotate(28deg)}
+.brand-spark:after{top:17px;transform:rotate(52deg)}
+.welcome-campus{height:200px;position:relative;line-height:0}
+.welcome-campus img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.line-icon{display:block;width:22px;height:22px;flex:none}
+.row-icon{display:grid;place-items:center;width:20px}
+.tab-bar .line-icon{width:22px;height:22px;margin:auto}
+.profile-chip .line-icon{display:inline-block;width:15px;height:15px;vertical-align:-3px}
+.chat-line-icon{display:block;width:28px;height:28px;background:none;color:var(--ink)}
+.modal-close{display:grid;place-items:center;width:32px;min-width:32px;min-height:32px;padding:0;border:1px solid #e9ddeb;border-radius:50%;background:#fff;color:var(--ink);font:24px/1 'PingFang SC',sans-serif}
+.data-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}
+.data-actions button{width:100%;min-height:42px;font-size:12px;margin:0}
+.data-actions .danger{color:#8c4c53}
+.week-days b.future{opacity:.5}
+.modal:has(.profile-form){padding:17px 18px}
+.modal .profile-form{margin-top:5px}
+.modal .profile-form .group{padding:10px 0}
+.modal .profile-form .group:first-child{padding-top:3px}
+.modal .profile-form .group-label{font-size:12px;margin-bottom:6px}
+.modal .form-chips{gap:5px}
+.modal .form-chip{min-height:34px}
+.modal .form-chip span{min-height:34px;padding:6px 11px;font-size:11px}
+.modal .profile-form select,.modal .profile-form input[type=number],.modal .profile-form input[type=time]{min-height:38px;padding:6px 9px;font-size:12px}
+.modal .profile-form .calendar-times{margin:9px 0 0;gap:6px}
+.modal .profile-form .calendar-times input{margin-top:4px}
+.modal .profile-form>.primary{margin-top:11px;min-height:44px}
+.welcome-content h1{font-family:Georgia,var(--serif);letter-spacing:-.035em}
+.today-intro h1{font-family:Georgia,var(--serif);font-size:30px;line-height:1.03;letter-spacing:-.035em;white-space:normal;max-width:205px;margin-bottom:10px}
+.today-intro>img{right:-2px;bottom:20px;width:158px;height:112px;opacity:.82}
+@media(max-width:420px){
+  .welcome-scroll{padding-bottom:max(26px,calc(var(--safe-bottom) + 16px))}
+  .tab-bar{height:calc(58px + max(10px,var(--safe-bottom)));padding-bottom:max(10px,var(--safe-bottom))}
+}
+@media(max-width:360px){.today-intro h1{font-size:27px;max-width:190px}}
+@media(max-height:700px) and (max-width:420px){
+  .welcome-hero{width:min(320px,calc(100% + 34px));margin:0 auto 5px}
+  .welcome-brand{height:75px}
+  .welcome-brand .brand-icon{width:77px;height:56px}
+  .welcome-brand .brand-lockup>div{width:64px}
+  .welcome-brand .brand-lockup strong{font-size:29px}
+  .welcome-brand .brand-lockup small{font-size:15.5px}
+  .brand-spark{left:calc(50% + 78px);top:22px}
+  .welcome-campus{height:164px}
+  .welcome-content h1{font-size:30px;margin:0 0 3px}
+  .welcome-content>p{font-size:11px;margin-bottom:9px}
+  .quick-rows{gap:5px}
+  .quick-row{height:48px}
+  .welcome-save{margin-top:13px;min-height:48px}
+}
